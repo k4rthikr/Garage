@@ -1,0 +1,31 @@
+Link: https://www.youtube.com/watch?v=V1vQf4qyMXg
+
+* Function names/signature should be least astonishing. Dont write stuff that surprise the developer who uses it.
+
+* Autobox/unbox
+
+void fn(Integer A) {
+    int a = A; //unboxing
+}
+Boxed types can store null, and supports only <, >, <=, >=. 
+They don't support ==, !=. Instead you have to use .equals()
+
+
+* Use of generics
+
+ArrayList<String> is a sub type of List<String>, but
+List<String> is not a sub type of List<Object>
+
+The correct thing to use is generics, especially in function arguments
+public void Integer doSomething ( List<? extends Object> abc);
+
+* Scala has much better type inference than java
+
+PECS - Producer "extends", Consumer "super"
+
+Foo<? extends T> = covariant in T
+Foo<? super T> = contravariant in T
+Foo<T> = Invariant in T
+Foo<?> = Independent of T
+
+
